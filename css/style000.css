@@ -1,0 +1,15 @@
+h1 {
+	font-family:verdana;
+}
+
+.ulslidetext {
+	background:#333;
+	color:#fff;
+        -moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	width:100%;
+}
+
+.lislidetext {
+    
+}

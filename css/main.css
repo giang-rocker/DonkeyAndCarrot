@@ -1,0 +1,280 @@
+/* 
+    Document   : main
+    Created on : Oct 5, 2013, 3:23:43 PM
+    Author     : Asus
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+/*
+START OWN CSS
+*/
+
+body {
+
+margin: 0px;
+padding: 0px;
+background-color: #19191b;
+}
+
+.bn_left_side {
+ 
+  height: 100%;
+
+}
+
+.bn_center_side {
+
+    
+}
+
+root { 
+    display: block;
+    color: #FFF;
+}
+
+/* header-nav  */
+.header-nav {
+ /* background: #363636;*/
+  height: 60px;
+  color: #FFF;
+  font-weight: bold;
+  padding: 10px;
+}
+/* header-nav  */
+.index-menu {
+ 
+  height: 60px;
+  color: #FFF;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.banner-bg{ 
+   
+   
+}
+h1{
+    color:#FFF;
+    font-weight:normal;
+    font-family: cursive;
+}
+
+.unlist {
+    padding-left: 10px;
+    color:#FFF;
+    font-weight:normal;
+    font-family: cursive;
+    list-style: none;
+    
+}
+
+.admin-menu {
+   text-align: center;
+   width: 100%;
+   margin: auto;
+   font-weight: bold;
+   font-family: sans-serif;
+   text-transform: uppercase;
+}
+
+.view-table {
+  margin: auto;
+  margin-top: 20px;
+  padding:5px;
+    
+}
+
+.addfont  {
+	font-family:cursive;
+
+}
+
+/*LIST MARGIN*/
+.margin10 {
+    
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+
+
+.margin20 {
+    
+   margin:10px;
+   padding-left: 10px;       
+   padding-right: 10px
+    
+}
+
+/*LIST CORLOR TEXT*/
+.white {
+    
+    color: white;
+    
+}
+
+.blue {
+    
+    color: blue;
+    
+}
+.skyblue {
+    
+    color: #39b3d7;
+    
+}
+
+
+.grey {
+    
+    color: #363636;
+    
+}
+.green {
+    
+    color: green;
+    
+}
+
+
+.red {
+    
+    color: red;
+    
+}
+
+
+.orangered {
+    
+    color: orangered;
+    
+}
+
+.bold {
+    
+   font-weight: bold; 
+}
+
+.italic {
+    
+   font-style: italic; 
+}
+
+/*LIST FONT SIZE */
+
+.sizelarge{
+    font-size: large;
+    
+    }
+.sizexxl{
+    font-size: xx-large;
+    
+    }
+  
+.sizelarger{
+    font-size: larger;
+    
+    }  
+.sizemedium{
+    font-size: medium;
+    
+    }
+ .sizesmall{
+    font-size: small;
+    
+    }
+ 
+    /* position */
+    /*LIST FONT SIZE */
+
+.center{
+   margin: auto;
+   text-align: center;
+    }
+   
+   .left{
+   margin: auto;
+   text-align: left;
+    }
+	
+	.right{
+   margin: auto;
+   text-align: right;
+    }
+   
+ /* IMANGE CSS */
+ .logo {
+    width:60px;
+   padding:2px;
+ }
+ 
+ .prod_img {
+    width:130px;
+    height:130px;
+   padding:2px;
+ }
+ 
+ .prod_img_slide {
+    width:170px;
+    height:170px;
+   padding:2px;
+ }
+ 
+ .prod_img_big {
+    width:250px;
+    height:250px;
+   padding:2px;
+ }
+ 
+ .index-li {
+   font-family: serif;
+     background-color: #111;
+      list-style-type: square;
+     text-align: left;
+     margin-left: 20%;
+     color:#fff;
+     
+     
+ }
+ 
+ .bo-tron {
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+
+ }
+ 
+ ::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-button {
+	width: 8px;
+	height:5px;
+}
+::-webkit-scrollbar-track {
+	background: #2b2b2b;
+	border: skinny plain lightgray;
+	box-shadow: 0px 0px 3px #dfdfdf inset;
+	border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+	background: #fff;
+	border: skinny plain gray;
+	border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #fff;
+}
+ 
+ .ulslidetext {
+	background:#333;
+	color:#fff;
+        -moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	width:100%;
+}
+
+.quotes {display: none;}
+
