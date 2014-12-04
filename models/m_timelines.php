@@ -1,5 +1,5 @@
  <?php 
-include_once("../config/database.php");
+include_once("./config/database.php");
   class Tb_timelines extends database{
     private $timeline_id ;
 	 private $timeline_icon ;
