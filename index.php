@@ -3,7 +3,9 @@
         <title>DONKEY & CARROT</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/main.css" rel="stylesheet" >
+        <link href="css/panel_tab.css" rel="stylesheet" >
 
+        <script src="js/bootstrap.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jqBootstrapValidation.js"></script>
         <script src="js/jquery.min.js"></script>

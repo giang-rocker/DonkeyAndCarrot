@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     04/12/14 8:18:40 PM                          */
+/* Created on:     04/12/14 11:47:24 PM                         */
 /*==============================================================*/
 
 
@@ -21,7 +21,7 @@ drop table if exists USER_TIMELINE_STORY;
 /*==============================================================*/
 create table TB_ACTION
 (
-   ACTION_ID            int not null,
+   ACTION_ID            int not null auto_increment,
    ACTION_TITLE         varchar(100),
    ACTION_POINT         int,
    primary key (ACTION_ID)
@@ -32,7 +32,7 @@ create table TB_ACTION
 /*==============================================================*/
 create table TB_NOTES
 (
-   NOTE_ID              int not null,
+   NOTE_ID              int not null auto_increment,
    USER_ID              int not null,
    NOTE_DATE            date,
    NOTE_CONTENT         text,
@@ -44,7 +44,7 @@ create table TB_NOTES
 /*==============================================================*/
 create table TB_TIMELINES
 (
-   TIMELINE_ID          int not null,
+   TIMELINE_ID          int not null auto_increment,
    TIMELINE_DATE        date,
    TIMELINE_LOCATION    varchar(50),
    TIMELINE_ICON        int,
@@ -57,7 +57,7 @@ create table TB_TIMELINES
 /*==============================================================*/
 create table TB_USERS
 (
-   USER_ID              int not null,
+   USER_ID              int not null auto_increment,
    USER_USERNAME        varchar(50),
    USER_BIRTHDAY        date,
    USER_PASSWORD        varchar(50),
