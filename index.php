@@ -14,9 +14,11 @@
     </head>
 
     <?php
+    
+       date_default_timezone_set("Asia/Ho_Chi_Minh"); 
     // menu
-    $listTable = array("timelines", "stories", "notes");
-    $listName = array("Timelines", "Stories", "Notes");
+    $listTable = array("timelines", "notes", "notes","users","actions","action_history");
+    $listName = array("Timelines", "Notes", "Notes");
 
 
     //get option
@@ -27,7 +29,16 @@
         $option = $listTable[0];
 
     // include model
-    include_once "./models/m_timelines.php";
+    foreach (  $listTable as $tb)
+    include_once "./models/m_".$tb.".php";
+    
+    $objNote = new Tb_notes();
+    $objUser = new Tb_users();
+    $objTimeline = new Tb_timelines();
+    $objActionHistory = new Action_history();
+    $objAction = new Tb_action();
     // inclde controller
     include_once ("./controllers/c_" . $option . ".php");
+   
+     
     ?>

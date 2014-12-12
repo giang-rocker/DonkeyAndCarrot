@@ -65,7 +65,7 @@ $this->setQuery("insert into tb_timelines(timeline_id,timeline_icon,timeline_typ
         }
     public function listOfTb_timelines () { 
   		mysql_query ("set character_set_results='utf8'");  
-		 $result = mysql_query("select * from tb_timelines"); 
+		 $result = mysql_query("select * from tb_timelines order by TIMELINE_DATE"); 
 		 $data; 
 		 while ($row = mysql_fetch_array ($result)) 
 				$data [] = $row;	 

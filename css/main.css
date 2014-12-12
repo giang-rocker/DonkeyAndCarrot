@@ -178,6 +178,10 @@ START OWN CSS
 
 /* TIMELINE CSS */
 
+.timeline_wrap{
+    background: url("../lib/timeline_bg.jpg");
+}
+
 .banner_timeline {
     width: 100%;
     height:200px;
@@ -297,6 +301,207 @@ START OWN CSS
      margin-left:240px;
 
 }
+
+/* CSS OF NOTES */
+
+.note_page{
+    height: 100%;
+    background:  url("../lib/note_bg.jpg")  repeat ;
+    
+}
+
+.banner_note{
+    height:30px;
+}
+
+.footer_note{
+    height:10px;
+}
+.table_note{
+    margin: 0px;
+    padding: 0px;
+  /*height: 500px;*/
+    
+}
+.note_detail {
+     margin: auto;
+    height: 270px;
+    width: 222px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 10px;
+    
+}
+
+.note_blue {
+      background: url("../lib/tag/note_blue.png") no-repeat  bottom center; 
+    
+}
+
+.note_green {
+      background: url("../lib/tag/note_green.png") no-repeat  bottom center; 
+    
+}
+
+.note_yellow {
+      background: url("../lib/tag/note_yellow.png") no-repeat  bottom center; 
+    
+}
+
+.note_orange {
+      background: url("../lib/tag/note_orange.png") no-repeat  bottom center; 
+    
+}
+
+.note_pink {
+      background: url("../lib/tag/note_pink.png") no-repeat  bottom center; 
+    
+}
+
+.donkey_avatar {
+     height: 100%;
+    width: 100%;
+   background: url("../lib/tag/donkey_avatar.png") no-repeat  top right; 
+    
+}
+
+.carrot_avatar {
+    height: 100%;
+    width: 100%;
+      background: url("../lib/tag/carrot_avatar.png") no-repeat right top; 
+    
+}
+
+.note_title{
+   
+    text-align: left;
+    padding-top: 45px;
+    padding-left: 0px;
+    height: 70px;
+}
+.note_content {
+    padding-left : 10px;
+    padding-right: 10px;
+    text-align: left;
+    text-wrap:  normal;
+    overflow: hidden;
+    height: 130px;
+    
+}
+
+.note_sign {
+   // border: 1px solid #660066;
+    height: 30px;
+    width: 100%;
+    margin: auto;
+    padding-right: 13%;
+    text-align: right;
+    vertical-align: top;
+    background: url("../lib/tag/sign_line.png") no-repeat bottom right;
+}
+
+.check_button{
+    width: 30px;
+    border: 0px;
+    height: 30px;
+    background: url("../lib/tag/check.png");
+    
+}
+
+.delete_button{
+    width: 30px;
+    border: 0px;
+    height: 30px;
+    background: url("../lib/tag/delete.png");
+    
+}
+
+/* END OF CSS OF NOTES */
+
+/* CSS OF MAINPAGE */
+
+.mainpage_wrap{
+   
+    background: url("../lib/bg_main.jpg") repeat ;
+    
+}
+.mainpage_banner{
+    height: 40px;
+    
+}
+
+.mainpage_content{
+    margin: auto;
+    text-align: center;
+    
+}
+.mainpage_table{
+    margin: auto;
+    
+}
+
+.mainpage_menu{
+    width:213px;
+    background: url("../lib/tag/chalk_stick.png") no-repeat center right;
+}
+
+.mainpage_paper_pen{
+    width: 780px;
+    height: 600px;
+    background: url("../lib/tag/pen_coffee.png") no-repeat center right;
+    
+}
+
+.mainpage_paper{
+    text-align: left;
+    padding-left: 30px;
+   width: 780px;
+    height: 600px;
+    background: url("../lib/tag/paper_bg.png") no-repeat top left;
+       
+}
+
+.paper_title{
+     height: 100px;
+    padding-top:50px;
+    padding-left: 60px;
+}
+
+.paper_progress{
+    margin-top:9px;
+    margin-left: 70px;
+    width: 360px;
+    background: url("../lib/tag/blank_progress.png") no-repeat center left;
+    height: 30px;
+    
+}
+
+.paper_progress_fill{
+  //  border:1px solid #2b2b2b;
+  //  text-align: right;
+ //   width: 300px;
+    height: 30px;
+    
+}
+
+.paper_content{
+    margin-top: 30px;
+    padding-left: 70px;
+    
+}
+
+.history_wrap{
+    margin-bottom: 22px;
+}
+
+.history_content{
+    padding-left: 15px;
+    line-height: 20px;
+}
+/* END OF CSS OF MAINPAGE */
+
+
+
 // ios eng
 @font-face {
     font-family: "ios_font";
@@ -329,3 +534,4 @@ START OWN CSS
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+
