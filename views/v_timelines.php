@@ -41,7 +41,7 @@ $indexOdd = 0;
                            <?php echo $listOfTimeline[$i]["TIMELINE_CONTENT"] ; ?>
                         </div>
 
-
+                    
                 </div>
 
             </td>

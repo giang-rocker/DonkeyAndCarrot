@@ -14,8 +14,13 @@ START OWN CSS
 /* RESET */
 
 .boby {
-   font-family:Roboto  ;
-    
+   min-height: 100%;
+    height: auto;
+    font-family:Roboto  ;
+-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* FONT */
@@ -26,7 +31,7 @@ START OWN CSS
     src:  url("../font/HelveticaNeue-UltraLight.ttf")  ;
 
 }
- 
+
 .ios_font {
     font-family: ios_font;
 
@@ -34,21 +39,21 @@ START OWN CSS
 
 // ios vn
 @font-face {
-font-family: ios_fontvn;
-font-style: normal;
+    font-family: ios_fontvn;
+    font-style: normal;
     font-weight: normal;
-src: url("../font/HelveticaNeue-Regular.ttf")  ; 
+    src: url("../font/HelveticaNeue-Regular.ttf")  ; 
 
 }
 .ios_fontvn {
-font-family: ios_fontvn;
+    font-family: ios_fontvn;
 }
 
 @font-face {
-font-family: 'Roboto';
-font-style: normal;
-font-weight: normal;
-src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff');
 }
 
 /* FONT */
@@ -218,24 +223,33 @@ src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff')
 /* CSS OF TIMELINE */
 
 .wrap_timeline{
-    background: url("../lib/timeline_bg.jpg") repeat;
-//    border: solid 1px #c9302c;
-    min-height: 100%;
+    background: url("../lib/timeline_bg.jpg") repeat ;
+    //    border: solid 1px #c9302c;
+
     padding-top: 50px;
     margin: auto;
- 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    height: auto;
+}
+
+.timeline_table{
+    width: 100%
 }
 
 .timeline_padding_top{
-   padding-top:185px;
-   
+    padding-top:185px;
+
 }
 
 .timeline_content{
     vertical-align: top;
-   //  border: solid 1px #fff;
+    //  border: solid 1px #fff;
     width: 330px;
-   
+
 }
 
 
@@ -246,11 +260,11 @@ src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff')
     width: 300px;
     text-align: center;
     vertical-align: top;
-   
+
     color: white;
     font-family: ios_font;
     font-size: 40px;
-    
+
 }
 /* BLUE */
 .timeline_content_location_blue{
@@ -375,7 +389,7 @@ src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff')
     padding-top: 20px;
     padding-left: 20px;
     font-size: x-large;
-     
+
 }
 .timeline_content_text{
     width: 311px;
