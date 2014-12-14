@@ -227,7 +227,7 @@ src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff')
 }
 
 .timeline_padding_top{
-   padding-top:183px;
+   padding-top:185px;
    
 }
 
@@ -236,6 +236,21 @@ src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff')
    //  border: solid 1px #fff;
     width: 330px;
    
+}
+
+
+
+.timeline_conner{
+    background: url("../lib/tag/timeline_conner.png") no-repeat 145px 48px ;
+    height:550px;
+    width: 300px;
+    text-align: center;
+    vertical-align: top;
+   
+    color: white;
+    font-family: ios_font;
+    font-size: 40px;
+    
 }
 /* BLUE */
 .timeline_content_location_blue{
@@ -397,7 +412,7 @@ src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff')
 .note_detail {
     margin: auto;
     height: 270px;
-    width: 222px;
+    width: 250px;
     text-align: left;
     padding-left: 20px;
     padding-right: 10px;
@@ -447,7 +462,7 @@ src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff')
 
     text-align: left;
     padding-top: 45px;
-    padding-left: 0px;
+    padding-left: 10px;
     height: 70px;
 }
 .note_content {

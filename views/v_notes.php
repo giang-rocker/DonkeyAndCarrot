@@ -11,7 +11,7 @@ $day = new DateTime();
 $indexEven = 1;
 $indexOdd = 0;
 ?>
-<div id ="note_page"  class="note_page"  style="  width:  <?php echo ($num / 2) * 222 + 20 ?>px;">
+<div id ="note_page"  class="note_page"  style="  width:  <?php echo ($num / 2) * 250 + 20 ?>px;">
     <div id="banner_note" class="banner_note">
 
     </div>
