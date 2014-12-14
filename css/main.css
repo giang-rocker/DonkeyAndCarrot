@@ -11,8 +11,47 @@
 START OWN CSS
 */
 
- 
+/* RESET */
 
+.boby {
+   font-family:Roboto  ;
+    
+}
+
+/* FONT */
+@font-face {
+    font-family: "ios_font";
+    font-style: normal;
+    font-weight: normal;
+    src:  url("../font/HelveticaNeue-UltraLight.ttf")  ;
+
+}
+ 
+.ios_font {
+    font-family: ios_font;
+
+}
+
+// ios vn
+@font-face {
+font-family: ios_fontvn;
+font-style: normal;
+    font-weight: normal;
+src: url("../font/HelveticaNeue-Regular.ttf")  ; 
+
+}
+.ios_fontvn {
+font-family: ios_fontvn;
+}
+
+@font-face {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff');
+}
+
+/* FONT */
 
 /*LIST MARGIN*/
 .margin10 {
@@ -136,7 +175,7 @@ START OWN CSS
 
 /* END OF IMAGE CSS */
 
- 
+
 
 .bo-tron {
     -moz-border-radius: 10px;
@@ -176,138 +215,170 @@ START OWN CSS
 
 .quotes {display: none;}
 
-/* TIMELINE CSS */
+/* CSS OF TIMELINE */
 
-.timeline_wrap{
-    background: url("../lib/timeline_bg.jpg");
-}
-
-.banner_timeline {
-    width: 100%;
-    height:200px;
-
-}
-
-.main_col {
-    width: 768px;
+.wrap_timeline{
+    background: url("../lib/timeline_bg.jpg") repeat;
+//    border: solid 1px #c9302c;
+    min-height: 100%;
+    padding-top: 50px;
     margin: auto;
+ 
 }
 
-.timeline_event {
-   height: 180px;
-    width: 768px; 
-    margin: auto;
-     
-    }
-
-.timeline_content {
-    height: 150px;
-    width: 768px; 
-    margin: auto;
-
-}
-
-.timeline_date {
-
-    width: 100%;
-    height: 30px;
-    text-align: center;
-
-}
-
-.cirle_tag {
-     margin: auto;
-    height: 135px;  
-    width: 135px;
-    display: inline-block;
-    text-align: center;
+.timeline_padding_top{
+   padding-top:183px;
    
-     
-  
 }
 
-.cirle_blue {
-    background : url("../lib/tag/circle_blue.png")  no-repeat center  ; 
+.timeline_content{
+    vertical-align: top;
+   //  border: solid 1px #fff;
+    width: 330px;
+   
+}
+/* BLUE */
+.timeline_content_location_blue{
+    background: url("../lib/tag/timeline_location_blue.png") no-repeat center ;
+    width: 330px;
+    height: 167px;
+    text-align: center;
+    padding-top:45px;
+    color: #018dff;
 
 }
-
-.cirle_green {
-    background: url("../lib/tag/circle_green.png") no-repeat  center; 
-}
-.cirle_orange {
-    background: url("../lib/tag/circle_orange.png") no-repeat  center; 
-}
-
-.cirle_yellow {
-    background: url("../lib/tag/circle_yellow.png") no-repeat  center; 
+.timeline_content_date_blue{
+    color: #018dff;
+    text-align: center;
+    width: 330px;
+    font-size: xx-large;
 }
 
-.narrow_tag {
-    height: 146px;
-    width: 21px;
-    display: inline-block;
-
+.timeline_content_dotline_blue{
+    background: url("../lib/tag/timeline_dotline_blue.png") no-repeat center ;
+    width: 330px;
+    height: 109px;
+}
+.timeline_content_main_blue{
+    background: url("../lib/tag/timeline_content_blue.png") no-repeat center ;
+    width: 330px;
+    height: 298px;
 }
 
-.narrow_blue {
-    background: url("../lib/tag/narrow_blue.png") no-repeat  center; 
+/* ORANGE */
+
+.timeline_content_location_orange{
+    background: url("../lib/tag/timeline_location_orange.png") no-repeat center ;
+    width: 330px;
+    height: 167px;
+    text-align: center;
+    padding-top:45px;
+    color: #f86c0b;
+
+}
+.timeline_content_date_orange{
+    color: #f86c0b;
+    text-align: center;
+    width: 330px;
+    font-size: xx-large;
 }
 
-.narrow_green {
-    background: url("../lib/tag/narrow_green.png") no-repeat  center; 
+.timeline_content_dotline_orange{
+    background: url("../lib/tag/timeline_dotline_orange.png") no-repeat center ;
+    width: 330px;
+    height: 109px;
 }
-.narrow_orange {
-    background: url("../lib/tag/narrow_orange.png") no-repeat  center; 
+.timeline_content_main_orange{
+    background: url("../lib/tag/timeline_content_orange.png") no-repeat center ;
+    width: 330px;
+    height: 298px;
+}
+/* GREEN */
+
+.timeline_content_location_green{
+    background: url("../lib/tag/timeline_location_green.png") no-repeat center ;
+    width: 330px;
+    height: 167px;
+    text-align: center;
+    padding-top:45px;
+    color: #9eb71b;
+
+}
+.timeline_content_date_green{
+    color: #9eb71b;
+    text-align: center;
+    width: 330px;
+    font-size: xx-large;
 }
 
-.narrow_yellow {
-    background: url("../lib/tag/narrow_yellow.png") no-repeat  center; 
+.timeline_content_dotline_green{
+    background: url("../lib/tag/timeline_dotline_green.png") no-repeat center ;
+    width: 330px;
+    height: 109px;
+}
+.timeline_content_main_green{
+    background: url("../lib/tag/timeline_content_green.png") no-repeat center ;
+    width: 330px;
+    height: 298px;
 }
 
-.rectangle_tag {
+
+/* RED */
+.timeline_content_location_red{
+    background: url("../lib/tag/timeline_location_red.png") no-repeat center ;
+    width: 330px;
+    height: 167px;
+    text-align: center;
+    padding-top:45px;
+    color: #ff2a00;
+
+}
+.timeline_content_date_red{
+    color: #ff2a00;
+    text-align: center;
+    width: 330px;
+    font-size: xx-large;
+}
+
+
+.timeline_content_dotline_red{
+    background: url("../lib/tag/timeline_dotline_red.png") no-repeat center ;
+    width: 330px;
+    height: 109px;
+}
+.timeline_content_main_red{
+    background: url("../lib/tag/timeline_content_red.png") no-repeat center ;
+    width: 330px;
+    height: 298px;
+}
+
+.timeline_content_title{
+    width: 311px;
+    color: #fff;
+    height: 55px;
     margin: auto;
-    height: 117px;
-    width: 347px;
-    display: inline-block;
-    text-align: left;
-    padding-top: 5px;
+    padding-top: 20px;
     padding-left: 20px;
-    padding-right: 10px;
+    font-size: x-large;
      
-
+}
+.timeline_content_text{
+    width: 311px;
+    margin: auto;
+    padding:10px;
+    height: 230px;
+    font-size: large;
+    color: #fff;
+    overflow: hidden;
 }
 
-.rectangle_blue {
-    background: url("../lib/tag/rectangle_blue.png") no-repeat  center; 
-}
-
-.rectangle_green {
-    background: url("../lib/tag/rectangle_green.png") no-repeat  center; 
-}
-.rectangle_orange {
-    background: url("../lib/tag/rectangle_orange.png") no-repeat  center; 
-}
-
-.rectangle_yellow {
-    background: url("../lib/tag/rectangle_yellow.png") no-repeat  center; 
-}
-
-
-
-.left_direction {
-    margin-left: 20px;
-}
-.right_direction {
-     margin-left:240px;
-
-}
 
 /* CSS OF NOTES */
 
 .note_page{
     height: 100%;
     background:  url("../lib/note_bg.jpg")  repeat ;
-    
+
 }
 
 .banner_note{
@@ -320,60 +391,60 @@ START OWN CSS
 .table_note{
     margin: 0px;
     padding: 0px;
-  /*height: 500px;*/
-    
+    /*height: 500px;*/
+
 }
 .note_detail {
-     margin: auto;
+    margin: auto;
     height: 270px;
     width: 222px;
     text-align: left;
     padding-left: 20px;
     padding-right: 10px;
-    
+
 }
 
 .note_blue {
-      background: url("../lib/tag/note_blue.png") no-repeat  bottom center; 
-    
+    background: url("../lib/tag/note_blue.png") no-repeat  bottom center; 
+
 }
 
 .note_green {
-      background: url("../lib/tag/note_green.png") no-repeat  bottom center; 
-    
+    background: url("../lib/tag/note_green.png") no-repeat  bottom center; 
+
 }
 
 .note_yellow {
-      background: url("../lib/tag/note_yellow.png") no-repeat  bottom center; 
-    
+    background: url("../lib/tag/note_yellow.png") no-repeat  bottom center; 
+
 }
 
 .note_orange {
-      background: url("../lib/tag/note_orange.png") no-repeat  bottom center; 
-    
+    background: url("../lib/tag/note_orange.png") no-repeat  bottom center; 
+
 }
 
 .note_pink {
-      background: url("../lib/tag/note_pink.png") no-repeat  bottom center; 
-    
+    background: url("../lib/tag/note_pink.png") no-repeat  bottom center; 
+
 }
 
 .donkey_avatar {
-     height: 100%;
+    height: 100%;
     width: 100%;
-   background: url("../lib/tag/donkey_avatar.png") no-repeat  top right; 
-    
+    background: url("../lib/tag/donkey_avatar.png") no-repeat  top right; 
+
 }
 
 .carrot_avatar {
     height: 100%;
     width: 100%;
-      background: url("../lib/tag/carrot_avatar.png") no-repeat right top; 
-    
+    background: url("../lib/tag/carrot_avatar.png") no-repeat right top; 
+
 }
 
 .note_title{
-   
+
     text-align: left;
     padding-top: 45px;
     padding-left: 0px;
@@ -386,11 +457,11 @@ START OWN CSS
     text-wrap:  normal;
     overflow: hidden;
     height: 130px;
-    
+
 }
 
 .note_sign {
-   // border: 1px solid #660066;
+    // border: 1px solid #660066;
     height: 30px;
     width: 100%;
     margin: auto;
@@ -405,7 +476,7 @@ START OWN CSS
     border: 0px;
     height: 30px;
     background: url("../lib/tag/check.png");
-    
+
 }
 
 .delete_button{
@@ -413,7 +484,7 @@ START OWN CSS
     border: 0px;
     height: 30px;
     background: url("../lib/tag/delete.png");
-    
+
 }
 
 /* END OF CSS OF NOTES */
@@ -421,23 +492,23 @@ START OWN CSS
 /* CSS OF MAINPAGE */
 
 .mainpage_wrap{
-   
+
     background: url("../lib/bg_main.jpg") repeat ;
-    
+
 }
 .mainpage_banner{
     height: 40px;
-    
+
 }
 
 .mainpage_content{
     margin: auto;
     text-align: center;
-    
+
 }
 .mainpage_table{
     margin: auto;
-    
+
 }
 
 .mainpage_menu{
@@ -449,20 +520,20 @@ START OWN CSS
     width: 780px;
     height: 600px;
     background: url("../lib/tag/pen_coffee.png") no-repeat center right;
-    
+
 }
 
 .mainpage_paper{
     text-align: left;
     padding-left: 30px;
-   width: 780px;
+    width: 780px;
     height: 600px;
     background: url("../lib/tag/paper_bg.png") no-repeat top left;
-       
+
 }
 
 .paper_title{
-     height: 100px;
+    height: 100px;
     padding-top:50px;
     padding-left: 60px;
 }
@@ -473,21 +544,21 @@ START OWN CSS
     width: 360px;
     background: url("../lib/tag/blank_progress.png") no-repeat center left;
     height: 30px;
-    
+
 }
 
 .paper_progress_fill{
-  //  border:1px solid #2b2b2b;
-  //  text-align: right;
- //   width: 300px;
+    //  border:1px solid #2b2b2b;
+    //  text-align: right;
+    //   width: 300px;
     height: 30px;
-    
+
 }
 
 .paper_content{
     margin-top: 30px;
     padding-left: 70px;
-    
+
 }
 
 .history_wrap{
@@ -502,29 +573,9 @@ START OWN CSS
 
 
 
-// ios eng
-@font-face {
-    font-family: "ios_font";
-      font-style: normal;
-  font-weight: normal;
-    src: local("ios_font"),url("../font/HelveticaNeue-UltraLigCond.otf") format("opentype");
-    
-}
 
-.ios_font {
-   font-family: ios_font , serif;
-   
-    }
-    /*
-// ios vn
-@font-face {
-    font-family: ios_fontvn;
-    src: url("../font/HelveticaNeue-Regular.otf");
-    
-}
-.ios_fontvn {
-   font-family: ios_fontvn;
-    }
+/*
+
 */
 
 .rotate_180 {

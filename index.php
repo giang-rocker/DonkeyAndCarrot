@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     </head>
-
+    <body class="boby" >
     <?php
     
        date_default_timezone_set("Asia/Ho_Chi_Minh"); 
@@ -42,3 +42,4 @@
    
      
     ?>
+    </body>
