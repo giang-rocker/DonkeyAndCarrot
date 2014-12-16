@@ -11,7 +11,20 @@ $day = new DateTime();
 $indexEven = 1;
 $indexOdd = 0;
 ?>
-<div id ="note_page"  class="note_page"  style="  width:  <?php echo ($num / 2) * 250 + 20 ?>px;">
+
+<script>
+      var h = $(document).height();
+        var w = $(document).width();
+
+        var zoom = h / 900;
+        
+       
+     //   alert(h + " " + w + " " + zoom);
+
+        $("#body").css({"zoom": zoom});
+</script>/
+
+<div id ="note_page"  class="note_page"  style="  width:  <?php echo ($num / 2) * 335 + 20 ?>px;">
     <div id="banner_note" class="banner_note">
 
     </div>
@@ -58,7 +71,7 @@ $indexOdd = 0;
     echo date_format($day, 'd/m/Y');
     ?>
                         </div>
-                        <div id="note_content" class="note_content sizelarge grey">
+                        <div id="note_content" class="note_content sizexl grey">
                             <?php echo $listOfNote[$indexEven]["NOTE_CONTENT"]; ?>
                         </div>
                         <div id="note_sign" class="note_sign sizelarge grey">
@@ -84,7 +97,7 @@ $indexOdd = 0;
                     echo date_format($day, 'd/m/Y');
                     ?>
                         </div>
-                        <div id="note_content" class="note_content sizelarge grey">
+                        <div id="note_content" class="note_content sizexl grey">
                             <?php echo $listOfNote[$indexOdd]["NOTE_CONTENT"]; ?>
                         </div>
                         <div id="note_sign" class="note_sign sizelarge grey">

@@ -8,6 +8,19 @@ $i_color = 0;
 $indexEven = 1;
 $indexOdd = 0;
 ?> 
+
+<script>
+      var h = $(document).height();
+        var w = $(document).width();
+
+        var zoom = h / 900;
+        
+       
+     //   alert(h + " " + w + " " + zoom);
+
+        $("#body").css({"zoom": zoom});
+</script>
+
 <div id="wrap_timeline" class="wrap_timeline" style="width:  <?php echo (($num) ) * 330 + (2*350) ?>px;">
     <table id="timeline_table" class="timeline_table">
         <tr>
@@ -22,7 +35,7 @@ $indexOdd = 0;
                 <div id="timeline_content_location_<?php echo $color[$i_color % 4] ?>" class="timeline_content_location_<?php echo $color[$i_color % 4] ?>">
                     <?php echo mb_strtoupper($listOfTimeline[$i]["TIMELINE_LOCATION"],"UTF-8"); ?>
                 </div>
-                <div id="timeline_content_date_<?php echo $color[$i_color % 4] ?>" class="timeline_content_date_<?php echo $color[$i_color % 4] ?> ios_font">
+                <div id="timeline_content_date_<?php echo $color[$i_color % 4] ?>" class=" timeline_content_date timeline_content_date_<?php echo $color[$i_color % 4] ?> ios_font sizexxl">
                    <?php
                     $day = date_create($listOfTimeline[$i]["TIMELINE_DATE"]);
                     echo date_format($day, 'd/m/Y'); 
@@ -32,12 +45,12 @@ $indexOdd = 0;
 
                 </div>
                 <div id="timeline_content_main_<?php echo $color[$i_color % 4] ?>" class="timeline_content_main_<?php echo $color[$i_color % 4] ?>">
-                    <div id="timeline_content_title" class="timeline_content_title" >
+                    <div id="timeline_content_title" class="timeline_content_title sizexl" >
                     <?php
                     echo  mb_strtoupper ( ($listOfTimeline[$i]["TIMELINE_TITLE"]), 'UTF-8');
                     ?>
                     </div>
-                    <div id="timeline_content_text" class="timeline_content_text" >
+                    <div id="timeline_content_text" class="timeline_content_text sizelarge " >
                            <?php echo $listOfTimeline[$i]["TIMELINE_CONTENT"] ; ?>
                         </div>
 
@@ -50,12 +63,12 @@ $indexOdd = 0;
             <td id="timeline_content" class="timeline_content" >
 
                 <div id="timeline_content_main_<?php echo $color[($i_color+1) % 4] ?>" class="timeline_content_main_<?php echo $color[($i_color+1) % 4]; ?>">
-                    <div id="timeline_content_title" class="timeline_content_title" >
+                    <div id="timeline_content_title" class="timeline_content_title sizexl" >
                      <?php
                     echo  mb_strtoupper ( ($listOfTimeline[$i+1]["TIMELINE_TITLE"]), 'UTF-8');
                     ?>
                     </div>
-                    <div id="timeline_content_text" class="timeline_content_text" >
+                    <div id="timeline_content_text" class="timeline_content_text sizelarge" >
                          <?php echo $listOfTimeline[$i+1]["TIMELINE_CONTENT"] ; ?>
                     </div>
 
@@ -65,7 +78,7 @@ $indexOdd = 0;
                 <div id="timeline_content_dotline_<?php echo $color[($i_color+1) % 4] ?>" class="timeline_content_dotline_<?php echo $color[($i_color+1) % 4] ?> rotate_180">
 
                 </div>
-                <div id="timeline_content_date_<?php echo $color[($i_color+1) % 4] ?>" class="timeline_content_date_<?php echo $color[($i_color+1) % 4] ?> ios_font ">
+                <div id="timeline_content_date_<?php echo $color[($i_color+1) % 4] ?>" class=" timeline_content_date timeline_content_date_<?php echo $color[($i_color+1) % 4] ?> ios_font sizexxl ">
                   <?php
                     $day = date_create($listOfTimeline[$i+1]["TIMELINE_DATE"]);
                     echo date_format($day, 'd/m/Y'); 
