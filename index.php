@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <html lang="en" >
     <head>
         <meta name="viewport" content="initial-scale=1">
@@ -14,14 +16,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     </head>
- 
+
 
     <body id = "body" class="boby"    >
-         
+
         <?php
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         // menu
-        $listTable = array("timelines", "notes", "notes", "users", "actions", "action_history");
+        $listTable = array("config", "login", "timelines", "notes", "notes", "users", "actions", "action_history");
         $listName = array("Timelines", "Notes", "Notes");
 
 
@@ -30,8 +32,16 @@
         if (isset($_GET["option"]))
             $option = $_GET["option"];
         else
-            $option = $listTable[0];
+            $option = "mainpage";
 
+        // check option logout;
+        if (isset($_GET["option"]) && $_GET["option"] == "logout") {
+            session_destroy();
+            header('Location: index.php?option=mainpage');
+        }
+        
+        
+        
         // include model
         foreach ($listTable as $tb)
             include_once "./models/m_" . $tb . ".php";
@@ -42,6 +52,11 @@
         $objActionHistory = new Action_history();
         $objAction = new Tb_action();
         // inclde controller
-        include_once ("./controllers/c_" . $option . ".php");
+        if (isset($_SESSION["username"])&& $_SESSION["username"]!="" && $_SESSION["username"]!=NULL) {
+             include_once ("./controllers/c_" . $option . ".php");
+        }
+        else 
+        include_once ("./controllers/c_mainpage.php");
+        
         ?>
     </body>

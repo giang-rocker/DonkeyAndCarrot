@@ -32,7 +32,7 @@ $day = new DateTime();
 
 <div id="mainpage_wrap" class="mainpage_wrap">
     <div id="mainpage_banner" class="mainpage_banner">
-
+        <a href="?option=logout" style="text-align: right; width: 100%" class="white" >Logout </a>
     </div>
     <div id ="mainpage_content" class="mainpage_content">
         <table id ="mainpage_table" class="mainpage_table">

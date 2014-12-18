@@ -79,15 +79,49 @@ class Tb_users extends database {
 
         return $data;
     }
-    
-     public function getUsernameById($id) {
-        mysql_query("set character_set_results='utf8'");
-        $result = mysql_query("select USER_USERNAME from tb_users where USER_ID=".$id);
-        $data;
-        $row = mysql_fetch_array($result);
-            $data[]   = $row;
 
-        return ucfirst ($data[0]["USER_USERNAME"]);
+    public function getUsernameById($id) {
+        mysql_query("set character_set_results='utf8'");
+        $result = mysql_query("select USER_USERNAME from tb_users where USER_ID=" . $id);
+        $data = "";
+        $row = mysql_fetch_array($result);
+        $data[] = $row;
+
+        return ucfirst($data[0]["USER_USERNAME"]);
+    }
+
+    public function checkLogin($txtUsername, $txtPassword) {
+        $sql = mysql_query("select USER_USERNAME from tb_users where USER_USERNAME='" . $txtUsername . "' and USER_PASSWORD "
+                . "= '" . $txtPassword."'");
+        $data = "";
+        $row = mysql_fetch_array($sql);
+        $data[] = $row;
+
+        if ($data[0]["USER_USERNAME"] != NULL)
+            return true;
+        else
+            return false;
+    }
+    
+    public function configPassword($username, $password){
+     $this->setQuery("update tb_users set USER_PASSWORD='" . $password. "' where USER_USERNAME ='" . $username . "'");
+        return $this->executeQuery();
+           
+    }
+    
+    public function checkConfig ($username) {
+        $username = strtolower($username);
+        $sql = mysql_query("select USER_PASSWORD from tb_users where USER_USERNAME='" . $username . "'");
+        $data = "";
+        $row = mysql_fetch_array($sql);
+        $data[] = $row;
+
+        if ($data[0]["USER_PASSWORD"] == NULL || $data[0]["USER_PASSWORD"] == "" )
+            return true;
+        else
+            return false;
+        
+        
     }
 
 }
