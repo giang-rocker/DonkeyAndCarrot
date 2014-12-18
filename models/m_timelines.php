@@ -11,7 +11,7 @@ class Tb_timelines extends database {
     private $TIMELINE_TYPE;
     private $TIMELINE_TITLE;
     private $USER_ID;
-    private $TIMELINE_CONTNENT;
+    private $TIMELINE_CONTENT;
     private $TIMELINE_TIMESTAMP;
 
     //List OF Primary Key
@@ -74,12 +74,12 @@ class Tb_timelines extends database {
         return $this->USER_ID;
     }
 
-    public function setTIMELINE_CONTNENT($TIMELINE_CONTNENT) {
-        $this->TIMELINE_CONTNENT = $TIMELINE_CONTNENT;
+    public function setTIMELINE_CONTENT($TIMELINE_CONTENT) {
+        $this->TIMELINE_CONTENT = $TIMELINE_CONTENT;
     }
 
-    public function getTIMELINE_CONTNENT() {
-        return $this->TIMELINE_CONTNENT;
+    public function getTIMELINE_CONTENT() {
+        return $this->TIMELINE_CONTENT;
     }
 
     public function setTIMELINE_TIMESTAMP($TIMELINE_TIMESTAMP) {
@@ -91,13 +91,13 @@ class Tb_timelines extends database {
     }
 
     public function add() {
-        $this->setQuery("insert into tb_timelines(TIMELINE_ID,TIMELINE_DATE,TIMELINE_LOCATION,TIMELINE_ICON,TIMELINE_TYPE,TIMELINE_TITLE,USER_ID,TIMELINE_CONTNENT,TIMELINE_TIMESTAMP) values  ( '" . $this->getTIMELINE_ID() . "','" . $this->getTIMELINE_DATE() . "','" . $this->getTIMELINE_LOCATION() . "','" . $this->getTIMELINE_ICON() . "','" . $this->getTIMELINE_TYPE() . "','" . $this->getTIMELINE_TITLE() . "','" . $this->getUSER_ID() . "','" . $this->getTIMELINE_CONTNENT() . "','" . $this->getTIMELINE_TIMESTAMP() . "')");
-
+        $this->setQuery("insert into tb_timelines(TIMELINE_DATE,TIMELINE_LOCATION,TIMELINE_TITLE,USER_ID,TIMELINE_CONTENT) values  ('" . $this->getTIMELINE_DATE() . "',n'" . $this->getTIMELINE_LOCATION() . "',n'" . $this->getTIMELINE_TITLE() . "','" . $this->getUSER_ID() . "',n'" . $this->getTIMELINE_CONTENT() . "')");
+        echo $this->getQuery();
         return $this->executeQuery();
     }
 
     public function update() {
-        $this->setQuery("update tb_timelines set TIMELINE_DATE='" . $this->getTIMELINE_DATE() . "' ,TIMELINE_LOCATION='" . $this->getTIMELINE_LOCATION() . "' ,TIMELINE_ICON='" . $this->getTIMELINE_ICON() . "' ,TIMELINE_TYPE='" . $this->getTIMELINE_TYPE() . "' ,TIMELINE_TITLE='" . $this->getTIMELINE_TITLE() . "' ,USER_ID='" . $this->getUSER_ID() . "' ,TIMELINE_CONTNENT='" . $this->getTIMELINE_CONTNENT() . "' ,TIMELINE_TIMESTAMP='" . $this->getTIMELINE_TIMESTAMP() . "' where TIMELINE_ID ='" . $this->getTIMELINE_ID() . "'");
+        $this->setQuery("update tb_timelines set TIMELINE_DATE='" . $this->getTIMELINE_DATE() . "' ,TIMELINE_LOCATION='" . $this->getTIMELINE_LOCATION() . "' ,TIMELINE_ICON='" . $this->getTIMELINE_ICON() . "' ,TIMELINE_TYPE='" . $this->getTIMELINE_TYPE() . "' ,TIMELINE_TITLE='" . $this->getTIMELINE_TITLE() . "' ,USER_ID='" . $this->getUSER_ID() . "' ,TIMELINE_CONTENT='" . $this->getTIMELINE_CONTENT() . "' ,TIMELINE_TIMESTAMP='" . $this->getTIMELINE_TIMESTAMP() . "' where TIMELINE_ID ='" . $this->getTIMELINE_ID() . "'");
         return $this->executeQuery();
     }
 
@@ -108,7 +108,7 @@ class Tb_timelines extends database {
 
     public function listOfTb_timelines() {
         mysql_query("set character_set_results='utf8'");
-        $result = mysql_query("select * from tb_timelines");
+        $result = mysql_query("select * from tb_timelines order by TIMELINE_DATE desc");
         $data;
         while ($row = mysql_fetch_array($result))
             $data [] = $row;
