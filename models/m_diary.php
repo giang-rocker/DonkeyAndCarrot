@@ -1,6 +1,6 @@
 <?php
 
-include_once("./config/database.php");
+include_once("../../../../config/database.php");
 
 class Tb_diary extends database {
 
