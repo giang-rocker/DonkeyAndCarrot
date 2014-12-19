@@ -23,7 +23,7 @@ session_start();
         <?php
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         // menu
-        $listTable = array("config", "login", "timelines", "notes", "notes", "users", "actions", "action_history");
+        $listTable = array("config", "login", "timelines", "notes","diary", "notes", "users", "actions", "action_history");
         $listName = array("Timelines", "Notes", "Notes");
 
 
@@ -51,6 +51,7 @@ session_start();
         $objTimeline = new Tb_timelines();
         $objActionHistory = new Action_history();
         $objAction = new Tb_action();
+         $objDiary = new Tb_diary();
         // inclde controller
         if (isset($_SESSION["username"])&& $_SESSION["username"]!="" && $_SESSION["username"]!=NULL) {
              include_once ("./controllers/c_" . $option . ".php");

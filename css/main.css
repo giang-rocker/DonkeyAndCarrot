@@ -740,3 +740,44 @@ p.forgotpass a {
     color: #F5683D;
 }
 
+/* CSS OF DIARY */
+
+.diary_content{
+    width: 90%;
+    height: 78%;
+     background: transparent;
+     overflow-y: auto;
+    
+}
+.diary_page{
+    width: 100%;
+    text-align: right;
+    
+}
+
+.diary_content_blank {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    padding: 5px;
+    
+    
+}
+
+.diary_page {
+ width: 100%;
+ text-align: left;
+    
+}
+.diary_title {
+ width: 100%;
+ text-align: left;
+ margin-bottom: 7px;
+    
+}
+
+.border1px {
+    
+ 
+ border: 1px solid #888888;   
+}
