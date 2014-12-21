@@ -1,6 +1,6 @@
 <?php
 
-include_once("../../../../config/database.php");
+include_once("./config/database.php");
 
 class Tb_diary extends database {
 
@@ -72,7 +72,7 @@ class Tb_diary extends database {
 
     public function listOfTb_diary() {
         mysql_query("set character_set_results='utf8'");
-        $result = mysql_query("select * from tb_diary order by DIARY_TIMESTAMP ASC");
+        $result = mysql_query("select * from tb_diary order by DIARY_ID DESC");
         $data;
         while ($row = mysql_fetch_array($result))
             $data [] = $row;

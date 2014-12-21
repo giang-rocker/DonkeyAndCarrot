@@ -1,0 +1,43 @@
+.flippage {
+    position: relative;
+}
+
+.flippage_page {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+
+
+}
+
+.flippage_page > div {
+    position: absolute;
+    top: 0;
+}
+
+.flippage_rshadow {
+    background-image: url("img/shadow-top-forward.png");
+    background-position: 100% 0;
+    background-repeat: repeat-y;
+}
+
+.flippage_lshadow {
+    background-image: url("img/shadow-top-back.png");
+    background-position: 0 0;
+    background-repeat: repeat-y;
+}
+
+.note_page{
+    background: url('../lib/notepad_page.png') repeat ; 
+   color: white;
+    padding-top:12px; 
+    padding-left:20px ;
+    overflow: auto;
+ 
+}
+
+.note_page_content{
+   font-size: 17px;
+   padding-top:3.5px;
+   line-height: 22.5px;
+}

@@ -13,7 +13,15 @@ session_start();
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jqBootstrapValidation.js"></script>
         <script src="js/jquery.min.js"></script>
+        <script  src="js/nicEdit.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <!-- jQuery -->
+    <script src="views/jquery.min.js"></script>
+
+    <!--  Flippage -->
+    <script src="views/jquery.flippage.min.js"></script>
+    <link href="views/jquery.flippage.css" type="text/css" rel="stylesheet" />
 
     </head>
 
