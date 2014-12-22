@@ -21,9 +21,6 @@ $num = count($listOfDiary);
         body > div {
             display: block;
             width: 100%;
-            margin-left: 50px;
-            margin-top: 50px;
-          
         }
 
 
@@ -52,35 +49,36 @@ $num = count($listOfDiary);
 <script type="text/javascript">
 	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
 </script>
+<script>
+      var h = $(document).height();
+        var w = $(document).width();
+
+        var padding = (h-600)/2;
+        
+
+        $("#diary_body").css({"margin": 200px});
+</script>
 
 
+<body class="diary_body" style="background: url('./lib/login_bg.jpg'); margin-top: 5%">
 
-<body style="background: url('./lib/login_bg.jpg');">
-
-    <div class="col-lg-6 col-lg-offset-3 "   >
+    <div class="col-lg-5 col-lg-offset-4  "   >
  
       
         <div class="exemples" style=" ">
             <div   style="background: transparent;"  ></div>
-            <div class="white"  >
-                
-                       <textarea name="area1" style="background: url('../lib/notepad_page.png'); width: 100%; height: 400px;  " >asdas</textarea>
-         <div id="note_sign" class="timeline_submit">
-                        <button class="delete_button" type="reset"></button>
-                        <button name="action" value="Add" class="check_button"></button>
-                    </div>
-            </div>
+             
             <div   style="background: url('./lib/diary_bg.jpg'); margin-left: 0px;" class="ios_font blue sizexxl" ></div>
             <?php for ($i = 0; $i < $num; $i+=2) { ?>
                 <div class='note_page'  >
-                    <?php echo ($i+1) ?><br/> 
-                    <div class='sizexl' style="color: blue; height: 27px;" > <?php echo $listOfDiary[$i]["DIARY_TITLE"]  ?> </div>
+                    <?php echo ($i+1)."/".$num ?><br/> 
+                    <div class='sizelarge white' style=" text-decoration: underline " > <?php echo $listOfDiary[$i]["DIARY_TITLE"]  ?> </div>
                     <div class='note_page_content'>   <?php echo $listOfDiary[$i]["DIARY_CONTENT"] ?> </div>
                 </div>
                 <?php if (($i + 1) < $num) { ?>
                      <div class='note_page'  >
-                     <?php echo ($i+2) ?><br/> 
-                    <div class='sizexl' style="color: blue; height: 27px;" > <?php echo $listOfDiary[$i+1]["DIARY_TITLE"]  ?> </div>
+                       <?php echo ($i+2)."/".$num ?><br/> 
+                    <div class='sizelarge white' style=" text-decoration: underline " >  <?php echo $listOfDiary[$i+1]["DIARY_TITLE"]  ?> </div>
                     <div class='note_page_content'>   <?php echo $listOfDiary[$i+1]["DIARY_CONTENT"] ?> </div>
                 </div>
                 <?php }
@@ -90,7 +88,7 @@ $num = count($listOfDiary);
         <div   style="background: url('./lib/diary_bg.jpg'); margin-left: 0px;" class="ios_font blue sizexxl" ></div>
      
         </div>
-        <div style="width: 100%; text-align: center" ><a href="#" onclick="$('.exemples:eq(0)').trigger('previous');
+        <div class=" " style="width: 600px;  text-align: center" ><a href="#" onclick="$('.exemples:eq(0)').trigger('previous');
         return false;">Previous</a> - <a href="#" onclick="javascript:$('.exemples:eq(0)').trigger('next');
                 return false;"  >Next</a></div>
     </div>	

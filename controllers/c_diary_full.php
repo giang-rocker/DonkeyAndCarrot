@@ -27,13 +27,13 @@
 					$i = 0;
 					if ($tb_diary->add() > 0)  $i = 1;
 					
-				echo "<script language=javascript> alert('Error!'); </script>";		
+					
 	 		   
                         }
-                        include_once('./views/v_diary.php');    
+                        include_once('./views/v_diary_full.php');    
  	   }  
            else 
- include_once('./views/v_diary.php');    
+ include_once('./views/v_diary_full.php');    
 
 		?>                              
 		

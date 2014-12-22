@@ -1,9 +1,9 @@
 <?php
 session_start();
 ?>
-<html lang="en" >
+<html lang="en" class="no-js" >
     <head>
-        <meta name="viewport" content="initial-scale=1">
+       <meta charset="UTF-8" />
         <title>DONKEY & CARROT</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/main.css" rel="stylesheet" >
@@ -14,14 +14,13 @@ session_start();
         <script src="js/jqBootstrapValidation.js"></script>
         <script src="js/jquery.min.js"></script>
         <script  src="js/nicEdit.js"></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        
+         
         <!-- jQuery -->
-    <script src="views/jquery.min.js"></script>
+        <script src="views/jquery.min.js"></script>
 
-    <!--  Flippage -->
-    <script src="views/jquery.flippage.min.js"></script>
-    <link href="views/jquery.flippage.css" type="text/css" rel="stylesheet" />
+        <!--  Flippage -->
+        <script src="views/jquery.flippage.min.js"></script>
+        <link href="views/jquery.flippage.css" type="text/css" rel="stylesheet" />
 
     </head>
 
@@ -31,7 +30,7 @@ session_start();
         <?php
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         // menu
-        $listTable = array("config", "login", "timelines", "notes","diary", "notes", "users", "actions", "action_history");
+        $listTable = array("config", "login", "timelines", "notes", "diary", "notes", "users", "actions", "action_history");
         $listName = array("Timelines", "Notes", "Notes");
 
 
@@ -47,9 +46,9 @@ session_start();
             session_destroy();
             header('Location: index.php?option=mainpage');
         }
-        
-        
-        
+
+
+
         // include model
         foreach ($listTable as $tb)
             include_once "./models/m_" . $tb . ".php";
@@ -59,13 +58,11 @@ session_start();
         $objTimeline = new Tb_timelines();
         $objActionHistory = new Action_history();
         $objAction = new Tb_action();
-         $objDiary = new Tb_diary();
+        $objDiary = new Tb_diary();
         // inclde controller
-        if (isset($_SESSION["username"])&& $_SESSION["username"]!="" && $_SESSION["username"]!=NULL) {
-             include_once ("./controllers/c_" . $option . ".php");
-        }
-        else 
-        include_once ("./controllers/c_mainpage.php");
-        
+        if (isset($_SESSION["username"]) && $_SESSION["username"] != "" && $_SESSION["username"] != NULL) {
+            include_once ("./controllers/c_" . $option . ".php");
+        } else
+            include_once ("./controllers/c_mainpage.php");
         ?>
     </body>
