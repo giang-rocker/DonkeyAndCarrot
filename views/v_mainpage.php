@@ -8,7 +8,7 @@ $num = min(5, count($listActionHistory));
 
 $day = new DateTime();
 ?>
-
+<!--
 <script>
     var h = $(document).height();
     var w = $(document).width();
@@ -28,7 +28,7 @@ $day = new DateTime();
   //  alert(h + " " + w + " " + zoom);
 
     $("#body").css({"zoom": x});
-</script>
+</script>-->
 
 <div id="mainpage_wrap" class="mainpage_wrap">
     <div id="mainpage_banner" class="mainpage_banner">
@@ -37,11 +37,11 @@ $day = new DateTime();
     <div id ="mainpage_content" class="mainpage_content">
         <table id ="mainpage_table" class="mainpage_table">
             <tr >
-                <td id="mainpage_menu" class="mainpage_menu">
-                    <a href="?option=status">   <img src="./lib/tag/menu_status.png" /></a><br/>
-                    <a href="?option=timelines">    <img src="./lib/tag/menu_timeline.png" /></a><br/>
-                    <a href="?option=notes">    <img src="./lib/tag/menu_stories.png" /></a><br/>
-                    <a href="?option=about">    <img src="./lib/tag/menu_about.png" /></a><br/>
+                <td id="mainpage_menu" class="mainpage_menu menu_font white sizexxl">
+                    <a href="?option=status">Status</a><br/>
+                    <a href="?option=timelines">Timeline</a><br/>
+                    <a href="?option=notes">Notes</a><br/>
+                    <a href="?option=diary_full">Diary</a><br/>
                 </td>
 
                 <td id="mainpage_paper_wrap" class="mainpage_paper_wrap">

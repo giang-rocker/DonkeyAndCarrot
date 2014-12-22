@@ -23,11 +23,13 @@ $num = count($listOfDiary);
         <script src="./views/js/modernizr.custom.79639.js"></script>
     </head>
     <script type="text/javascript">
+          var h = $(document).height() * 0.8;
         bkLib.onDomLoaded(function () {
-            nicEditors.allTextAreas()
+         //  nicEditors.allTextAreas();
+             new nicEditor({maxHeight : h}).panelInstance('txtDIARY_CONTENT');
         });
     </script>
-    <body>
+    <body style="background: url('./lib/login_bg.jpg')"  >
         <div id="container" class="container">	
             <div class="bb-custom-wrapper">
                 <div id="bb-bookblock" class="bb-bookblock">
@@ -35,9 +37,9 @@ $num = count($listOfDiary);
                         <div class="content">
                             <div class="scroller">
                                 <form method="POST" action ="">
-                                    <h2 style="height: 20px" ><input name='txtDIARY_TITLE' style=" width: 100%; margin: auto; text-transform: uppercase" placeholder="SOME TITLE" /></h2>
+                                    <h2  style="height: 20px" ><input name='txtDIARY_TITLE' style=" width: 100%; margin: auto; text-transform: uppercase" placeholder="SOME TITLE" /></h2>
                                     <p style="font-size: 20px">
-                                        <textarea name="txtDIARY_CONTENT" style="width: 100%; height: 80%; resize: none;"  ></textarea>
+                                        <textarea id="txtDIARY_CONTENT" name="txtDIARY_CONTENT" style="width: 100%;   resize: none;" rows="20"  ></textarea>
                                     </p>
                                     <div  style="width: 80%; text-align: right;">
                                         <button class="delete_button" type="reset"></button>
@@ -51,9 +53,10 @@ $num = count($listOfDiary);
                         <div class="bb-item" id="item1">
                             <div class="content">
                                 <div class="scroller">
+                                      <p style="text-align: right"><?php echo (($i + 1) . "/" . $num) ?> </p>
+                                  
                                     <h2><?php echo $listOfDiary[$i]["DIARY_TITLE"] ?></h2>
-                                    <p style="text-align: right"><?php echo (($i + 1) . "/" . $num) ?> </p>
-                                    <p>  <?php
+                                    <p class="" style=" font-size: 25px" >  <?php
                                         // echo date
                                         $day = date_create($listOfDiary[$i]["DIARY_TIMESTAMP"]);
                                         echo date_format($day, 'd/m/Y');

@@ -27,7 +27,7 @@
     background-repeat: repeat-y;
 }
 
-.note_page{
+.diary_page{
     background: url('../lib/notepad_page.png') repeat ; 
    color: white;
     padding-top:12px; 

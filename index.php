@@ -3,7 +3,8 @@ session_start();
 ?>
 <html lang="en" class="no-js" >
     <head>
-       <meta charset="UTF-8" />
+       
+        <meta charset="UTF-8" />
         <title>DONKEY & CARROT</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/main.css" rel="stylesheet" >

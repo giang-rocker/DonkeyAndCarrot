@@ -22,7 +22,7 @@ $indexOdd = 0;
      //   alert(h + " " + w + " " + zoom);
 
         $("#body").css({"zoom": zoom});
-</script>/
+</script>
 
 <div id ="note_page"  class="note_page"  style="  width:  <?php echo ($num / 2) * 335 + 20 ?>px;">
     <div id="banner_note" class="banner_note">

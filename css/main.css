@@ -24,11 +24,20 @@ START OWN CSS
 /* FONT */
 @font-face {
     font-family: "ios_font";
-    font-style: normal;
+   
     
     src:  url("../font/HelveticaNeue-UltraLight.ttf")  ;
 
 }
+
+@font-face {
+    font-family: "menu_font";
+   
+    
+    src:  url("../font/Today is the Oldest and Youngest You Will Ever Be_0.ttf")  ;
+
+}
+
 
 textarea{
     resize: none;
@@ -37,10 +46,15 @@ textarea{
 
 .ios_font {
     font-family: ios_font;
-
+    
 }
 
-// ios vn
+.ios_font {
+    font-family: ios_font;
+    
+}
+
+ 
 @font-face {
     font-family: ios_fontvn;
     font-style: normal;
@@ -48,8 +62,8 @@ textarea{
     src: url("../font/HelveticaNeue-Regular.ttf")  ; 
 
 }
-.ios_fontvn {
-    font-family: ios_fontvn;
+.menu_font {
+    font-family: menu_font;
 }
 
 @font-face {
@@ -470,7 +484,7 @@ textarea{
    min-height: 100%;
      
     height: auto;
-   background:  url("../lib/note_bg.jpg")  repeat ;
+   background:  url("../lib/bg_main.jpg")  repeat ;
 
 }
 
@@ -586,7 +600,8 @@ textarea{
 /* CSS OF MAINPAGE */
 
 .mainpage_wrap{
-     min-height: 100%;
+  width: auto;
+    min-height: 100%;
     height: auto;
   
     background: url("../lib/bg_main.jpg") repeat ;
@@ -600,16 +615,37 @@ textarea{
 .mainpage_content{
     margin: auto;
     text-align: center;
-
+    
 }
+ 
+
 .mainpage_table{
     margin: auto;
 
 }
 
 .mainpage_menu{
+   
     width:213px;
     background: url("../lib/tag/chalk_stick.png") no-repeat center right;
+   font-size: 80px;
+   color: white;
+   text-align: right;
+   padding-right: 70px;;
+   line-height: 80px;
+   padding-top: 80px;
+      vertical-align: top;
+}
+
+.mainpage_menu a:hover  {
+      text-decoration: none;
+    font-size: 100px;
+  
+}
+
+.mainpage_menu  a:visited  {
+    color: white;
+    
 }
 
 .mainpage_paper_pen{
