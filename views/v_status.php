@@ -33,7 +33,7 @@
             <a href="index.php?option=status&action=kiss">  <img src="./lib/kiss.png"       class="icon_action"        /></a>
             <a href="index.php?option=status&action=notavailable">  <img src="./lib/blank.png"     class="icon_action"          /></a>
         </div>
-        <div class="status_TV"><img src="./lib/<?php 
+        <div class="status_tv"><img src="./lib/<?php 
         if (isset($_GET['action'])) {
             echo $_GET['action'];
             }

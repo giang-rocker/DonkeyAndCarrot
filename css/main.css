@@ -824,10 +824,7 @@ p.forgotpass a {
 .wrap_status{
     width: 100%; 
     height: 100%; 
-    position: absolute; 
-    left: 0px; 
-    top: 0px; 
-    z-index: 0;
+   
     background: url("../lib/login_bg.jpg");
         
     
@@ -865,12 +862,12 @@ p.forgotpass a {
     
 }
 
-.status_TV{
+.status_tv{
     width: 640px;
     height: 432px;
     padding-left: 24px;
     padding-top:16px;
-    background: url("../lib/TV.png");
+    background: url("../lib/tv.png");
     
 }
 
