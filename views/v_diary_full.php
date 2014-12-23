@@ -26,7 +26,7 @@ $num = count($listOfDiary);
           var h = $(document).height() * 0.8;
         bkLib.onDomLoaded(function () {
          //  nicEditors.allTextAreas();
-             new nicEditor({maxHeight : h}).panelInstance('txtDIARY_CONTENT');
+             new nicEditor({maxHeight : (h-30)}).panelInstance('txtDIARY_CONTENT');
         });
     </script>
     <body style="background: url('./lib/login_bg.jpg')"  >
@@ -39,7 +39,7 @@ $num = count($listOfDiary);
                                 <form method="POST" action ="">
                                     <h2  style="height: 20px" ><input name='txtDIARY_TITLE' style=" width: 100%; margin: auto; text-transform: uppercase" placeholder="SOME TITLE" /></h2>
                                     <p style="font-size: 20px">
-                                        <textarea id="txtDIARY_CONTENT" name="txtDIARY_CONTENT" style="width: 100%;   resize: none;" rows="20"  ></textarea>
+                                        <textarea id="txtDIARY_CONTENT" name="txtDIARY_CONTENT" style="width: 100%; height: 80%;  resize: none;"   ></textarea>
                                     </p>
                                     <div  style="width: 80%; text-align: right;">
                                         <button class="delete_button" type="reset"></button>
@@ -55,7 +55,7 @@ $num = count($listOfDiary);
                                 <div class="scroller">
                                       <p style="text-align: right"><?php echo (($i + 1) . "/" . $num) ?> </p>
                                   
-                                    <h2><?php echo $listOfDiary[$i]["DIARY_TITLE"] ?></h2>
+                                      <h2 style="text-transform: uppercase"><?php echo $listOfDiary[$i]["DIARY_TITLE"] ?></h2>
                                     <p class="" style=" font-size: 25px" >  <?php
                                         // echo date
                                         $day = date_create($listOfDiary[$i]["DIARY_TIMESTAMP"]);

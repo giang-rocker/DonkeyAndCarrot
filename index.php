@@ -66,4 +66,6 @@ session_start();
         } else
             include_once ("./controllers/c_mainpage.php");
         ?>
+        
+        <div style="bottom:0px; left: 0px;position: fixed;"><a href="index.php"><img src="lib/homepng.png" width="50%" /></a></div>
     </body>
