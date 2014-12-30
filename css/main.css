@@ -13,27 +13,30 @@ START OWN CSS
 
 /* RESET */
 
+
+
 .boby {
-   width: auto;
-   height: auto;
+
+    height: 100%;
+    width: 100%;
     font-family:Roboto  ;
-   
+
 
 }
 
 /* FONT */
 @font-face {
     font-family: "ios_font";
-   
-    
+
+
     src:  url("../font/HelveticaNeue-UltraLight.ttf")  ;
 
 }
 
 @font-face {
     font-family: "menu_font";
-   
-    
+
+
     src:  url("../font/Today is the Oldest and Youngest You Will Ever Be_0.ttf")  ;
 
 }
@@ -41,24 +44,28 @@ START OWN CSS
 
 textarea{
     resize: none;
-    
+
 }
 
 .ios_font {
     font-family: ios_font;
-    
+
 }
 
 .ios_font {
     font-family: ios_font;
-    
+
 }
 
- 
+.roboto_font {
+    font-family: roboto;
+
+}
+
 @font-face {
     font-family: ios_fontvn;
     font-style: normal;
-    
+
     src: url("../font/HelveticaNeue-Regular.ttf")  ; 
 
 }
@@ -70,7 +77,7 @@ textarea{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
-    src: local('Roboto'), local('Roboto'), url("../font/Roboto.woff") format('woff');
+    src:  url("../font/roboto.ttf")  ;
 }
 
 /* FONT */
@@ -200,6 +207,7 @@ textarea{
 
 
 .bo-tron {
+
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 
@@ -207,6 +215,7 @@ textarea{
 
 ::-webkit-scrollbar {
     width: 8px;
+
 }
 ::-webkit-scrollbar-button {
     width: 8px;
@@ -214,14 +223,15 @@ textarea{
 }
 ::-webkit-scrollbar-track {
     background: #2b2b2b;
-    border: skinny plain lightgray;
+    border: 1px solid lightgray;
     box-shadow: 0px 0px 3px #dfdfdf inset;
-    border-radius:10px;
+    border-radius:5px;
+    width: 8px;
 }
 ::-webkit-scrollbar-thumb {
     background: #fff;
     border: skinny plain gray;
-    border-radius:10px;
+    border-radius:8px;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #fff;
@@ -240,20 +250,19 @@ textarea{
 /* CSS OF TIMELINE */
 
 .wrap_timeline{
-    min-height: 100%;
-    height: auto;
     background: url("../lib/timeline_bg.jpg") repeat ;
-    //    border: solid 1px #c9302c;
+
+    height: 955px;
 
     padding-top: 50px;
     margin: auto;
-  
-    
+
+
 }
 
 .timeline_table{
     width: 100%;
-   
+
 }
 
 .timeline_padding_top{
@@ -269,9 +278,21 @@ textarea{
 }
 
 .timeline_content_date{
-    
+
     height: 35px;
+
+}
+
+.timeline_content_location {
+    height: 90px;
+    width: 70px;
+    word-wrap: normal;
+   
     
+    margin: auto;
+   
+    vertical-align: middle; 
+    text-align: center; 
 }
 
 .timeline_conner{
@@ -292,7 +313,8 @@ textarea{
     width: 330px;
     height: 167px;
     text-align: center;
-    padding-top:45px;
+    padding-top: 8px;
+     
     color: #018dff;
 
 }
@@ -300,7 +322,7 @@ textarea{
     color: #018dff;
     text-align: center;
     width: 330px;
-   
+
 }
 
 .timeline_content_dotline_blue{
@@ -321,7 +343,7 @@ textarea{
     width: 330px;
     height: 167px;
     text-align: center;
-    padding-top:45px;
+      padding-top: 8px;
     color: #f86c0b;
 
 }
@@ -329,7 +351,7 @@ textarea{
     color: #f86c0b;
     text-align: center;
     width: 330px;
-    
+
 }
 
 .timeline_content_dotline_orange{
@@ -345,12 +367,12 @@ textarea{
 /* GREEN */
 
 .timeline_content_location_green{
-   
+
     background: url("../lib/tag/timeline_location_green.png") no-repeat center ;
     width: 330px;
     height: 167px;
     text-align: center;
-    padding-top:45px;
+    padding-top: 8px;
     color: #9eb71b;
 
 }
@@ -358,11 +380,11 @@ textarea{
     color: #9eb71b;
     text-align: center;
     width: 330px;
-   
+
 }
 
 .timeline_content_dotline_green{
-  
+
     background: url("../lib/tag/timeline_dotline_green.png") no-repeat center ;
     width: 330px;
     height: 109px;
@@ -380,7 +402,7 @@ textarea{
     width: 330px;
     height: 167px;
     text-align: center;
-    padding-top:45px;
+     padding-top: 8px;
     color: #ff2a00;
 
 }
@@ -388,7 +410,7 @@ textarea{
     color: #ff2a00;
     text-align: center;
     width: 330px;
-    
+
 }
 
 
@@ -408,9 +430,9 @@ textarea{
     color: #fff;
     height: 55px;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 25px;
     padding-left: 20px;
-    
+
 
 }
 .timeline_content_text{
@@ -425,10 +447,11 @@ textarea{
 .input_timeline_location{
     background: transparent;
     width: 100px;
+    hight:100px;
     margin: auto;
     text-transform: uppercase;
     text-align: center;
-     border: 1px solid #39b3d7;
+    border: 1px solid #39b3d7;
 }
 
 .input_timeline_date{
@@ -439,9 +462,9 @@ textarea{
     text-align: center;
     border: 1px solid #39b3d7;
     height: 40px;
-   
-    
-    
+
+
+
 }
 .input_timeline_d  {
     border: 0px;
@@ -449,7 +472,7 @@ textarea{
     width: 30%;
     text-align: center;
     color: white;
-    
+
 } 
 
 .input_timeline_title{
@@ -459,17 +482,17 @@ textarea{
     text-transform: uppercase;
     text-align: left;
     border: 1px solid #FFF;
-    
+
 }
 .input_timeline_content{
     background: transparent;
     width: 100%;
     height: 180px;
     margin: auto;
-    
+
     text-align: left;
     border: 1px solid #FFF;
-    
+
 }
 
 .timeline_submit{
@@ -480,11 +503,10 @@ textarea{
 /* CSS OF NOTES */
 
 .note_page{
-   
-   min-height: 100%;
-     
-    height: auto;
-   background:  url("../lib/bg_main.jpg")  repeat ;
+
+    height: 955px;
+
+    background:  url("../lib/bg_main.jpg")  repeat ;
 
 }
 
@@ -502,7 +524,7 @@ textarea{
 
 }
 .note_detail {
-  //  border: 1px solid #018dff;
+    //  border: 1px solid #018dff;
     margin: auto;
     height: 380px;
     width: 335px;
@@ -554,9 +576,9 @@ textarea{
 .note_title{
 
     text-align: left;
-    padding-top: 45px;
+    padding-top: 35px;
     padding-left: 10px;
-    height: 70px;
+    height: 80px;
 }
 .note_content {
     padding-left : 10px;
@@ -564,16 +586,16 @@ textarea{
     text-align: left;
     text-wrap:  normal;
     overflow: hidden;
-    height: 220px;
+    height: 215px;
 
 }
 
 .note_sign {
     // border: 1px solid #660066;
-    height: 30px;
+    height: 40px;
     width: 100%;
     margin: auto;
-    padding-right: 13%;
+    padding-right: 20px;
     text-align: right;
     vertical-align: top;
     background: url("../lib/tag/sign_line.png") no-repeat bottom right;
@@ -600,24 +622,25 @@ textarea{
 /* CSS OF MAINPAGE */
 
 .mainpage_wrap{
-  width: auto;
+    width: 100%;
     min-height: 100%;
-    height: auto;
-  
+
+    // height: auto;
+
     background: url("../lib/bg_main.jpg") repeat ;
 
 }
 .mainpage_banner{
-    height: 40px;
+    height: 150px;
 
 }
 
 .mainpage_content{
     margin: auto;
     text-align: center;
-    
+
 }
- 
+
 
 .mainpage_table{
     margin: auto;
@@ -625,27 +648,27 @@ textarea{
 }
 
 .mainpage_menu{
-   
+
     width:213px;
     background: url("../lib/tag/chalk_stick.png") no-repeat center right;
-   font-size: 80px;
-   color: white;
-   text-align: right;
-   padding-right: 70px;;
-   line-height: 80px;
-   padding-top: 80px;
-      vertical-align: top;
+    font-size: 80px;
+    color: white;
+    text-align: right;
+    padding-right: 70px;;
+    line-height: 80px;
+    padding-top: 80px;
+    vertical-align: top;
 }
 
 .mainpage_menu a:hover  {
     text-decoration: none;
     font-size: 100px;
-  
+
 }
 
 .mainpage_menu a   {
     color: white;
-    
+
 }
 
 .mainpage_paper_pen{
@@ -680,19 +703,19 @@ textarea{
 }
 
 .paper_progress_fill{
-    
+
     height: 30px;
 
 }
 
 .paper_content{
-    margin-top: 30px;
+    margin-top: 26px;
     padding-left: 70px;
 
 }
 
 .history_wrap{
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 }
 
 .history_content{
@@ -781,14 +804,14 @@ p.forgotpass a {
 .diary_content{
     width: 90%;
     height: 78%;
-     background: transparent;
-     overflow-y: auto;
-    
+    background: transparent;
+    overflow-y: auto;
+
 }
 .diary_page{
     width: 100%;
     text-align: right;
-    
+
 }
 
 .diary_content_blank {
@@ -796,51 +819,48 @@ p.forgotpass a {
     height: 80%;
     background: transparent;
     padding: 5px;
-    
-    
+
+
 }
 
 .diary_page {
- width: 100%;
- text-align: left;
-    
+    width: 100%;
+    text-align: left;
 }
 .diary_title {
- width: 100%;
- text-align: left;
- margin-bottom: 7px;
-    
+    width: 100%;
+    text-align: left;
+    margin-bottom: 7px;
+
 }
 
 .border1px {
-    
- 
- border: 1px solid #888888;   
+    border: 1px solid #888888;   
 }
 
 
 /* STATUS */
 
 .wrap_status{
-    width: 100%; 
-    height: 100%; 
-   
-    background: url("../lib/login_bg.jpg");
-        
-    
+
+    height: 100%;
+
+    min-width: 100%;
+    margin: auto;
+    background: url("../lib/login_bg.jpg") repeat;
+
 }
 
- .wrap_content{
-   width: 644px;
-   margin: auto;
-        
-    
+.wrap_content{
+    width: 644px;
+    margin: auto;
+    height: 100%;
+
 }
- .status_top{
-   width: 644px;
- height: 50px;
-        
-    
+.status_top{
+    width: 644px;
+    height: 10px;
+
 }
 
 
@@ -848,18 +868,15 @@ p.forgotpass a {
     width: 644px;
     display: inline-block;
     height:170px;
-    
-  
-    
+
 }
 
 .status_action{
     width: 644px;
     height: 130px;
-   text-align: center;
+    text-align: center;
     vertical-align: bottom;
-     
-    
+
 }
 
 .status_tv{
@@ -868,45 +885,209 @@ p.forgotpass a {
     padding-left: 24px;
     padding-top:16px;
     background: url("../lib/tv.png");
-    
+
+}
+
+.prop_progress{
+    position : relative;
+    left:0px;
+    top :25px;
+
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .status_progressbar {
-   
+
     width: 322px;
-    height: 38px;
+    height: 60px;
     padding-top:2px;
     padding-left:3px;
     padding-right: 5px;
     background: url("../lib/blank_progress.png") no-repeat bottom center ;
-    
-    
-    
+
 }
 
 .carrot_status {
-    
+
     position : relative;
-    top: 27px;
-    left: 80%;
+    top: 50px;
+    z-index: 100;
+
 }
 
 .donkey_status {
-    
+
     position : relative;
-    top: 27px;
+    top: 50px;
     left: 0%;
+}
+
+.action_log{
+    background: url("../lib/action_log.png") no-repeat;
+    height: 200px;
+    width: 100%;
+    padding-left : 130px;
+    padding-top:29px;
 }
 
 .icon_action {
     margin-right: 20px;
     margin-top:30px;
-    
+
 }
 
 .icon_action:hover {
-       margin-right: 10px;
-     margin-top:10px;
+    margin-right: 10px;
+    margin-top:10px;
     width: 120px;
     heigh: 120px;
+}
+
+.status_reason {
+    height: 50px;
+    padding-top:12px;
+    width: 100%;
+    margin: auto;
+}
+
+.flying_mess {
+   height:180px;
+   top:0px;
+   left: 0px;
+   position : fixed;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 1;
+  color: white;
+  font-weight: bold;
+    
+}
+
+.flying_mess a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.blink {
+    color:red;
+}
+
+/* TO DO LIST */
+
+.wrap_todolist {
+   background: url("../lib/timeline_bg.jpg") repeat ;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    margin: auto;
+    padding-top:50px;
+    
+   
+}
+
+.todolist_content {
+    margin: auto;
+    width: 600px;
+    height: auto;
+}
+
+.todolist_banner{
+  
+    width: 100%;
+    height: 147px;
+    background: url("../lib/todolisbanner.jpg");
+    
+}
+
+.todolist_table{
+  
+    width: 600px;
+    border: 0px;
+    background: url("../lib/todolist_background.jpg") repeat-y ; 
+}
+
+
+.todolist_detail{
+    width: 100%;
+    height: 50px;
+   
+}
+
+.todolist_check{
+    border: 0px;
+    width: 100px;
+    height: 50px;
+ 
+  padding-left: 60px;
+  padding-top : 0px;
+  vertical-align: bottom;
+    
+}
+
+.todolist_check_blue {
+       background:  url("../lib/tag/todolist_blue_circle.png") no-repeat right ;
+}
+
+.todolist_check_green{
+       background:  url("../lib/tag/todolist_green_circle.png") no-repeat right ;
+}
+
+.todolist_check_red {
+       background:  url("../lib/tag/todolist_red_circle.png") no-repeat right ;
+}
+
+.todolist_check_yellow {
+       background:  url("../lib/tag/todolist_yellow_circle.png") no-repeat right ;
+}
+
+.todolist_check_orange {
+       background:  url("../lib/tag/todolist_orange_circle.png") no-repeat right ;
+}
+
+.todolist_check_pupple {
+       background:  url("../lib/tag/todolist_pupple_circle.png") no-repeat right ;
+}
+
+.todolist_title{
+    border: 0px;
+    width: 420px;
+    height: 50px;
+    margin: auto;
+    padding-top: 19px;
+    padding-left: 5px;
+}
+
+.todolist_title_blue {
+    background:  url("../lib/tag/todolist_blue_line.png") no-repeat right ;    
+}
+.todolist_title_green {
+    background:  url("../lib/tag/todolist_green_line.png") no-repeat right ;    
+}
+.todolist_title_orange {
+    background:  url("../lib/tag/todolist_orange_line.png") no-repeat right ;    
+}
+.todolist_title_red {
+    background:  url("../lib/tag/todolist_red_line.png") no-repeat right ;    
+}
+.todolist_title_yellow {
+    background:  url("../lib/tag/todolist_yellow_line.png") no-repeat right ;    
+}
+
+.todolist_title_pupple {
+    background:  url("../lib/tag/todolist_pupple_line.png") no-repeat right ;    
+}
+.todolist_avatar{
+       border: 0px;
+     width: 60px;
+     height: 50px;     
+}
+
+.todolist_footer{
+    
+    width: 100%;
+    height: 20px;
+    background: url("../lib/todolistfooter.jpg");
+    
 }

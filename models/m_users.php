@@ -73,7 +73,7 @@ class Tb_users extends database {
     public function listOfTb_users() {
         mysql_query("set character_set_results='utf8'");
         $result = mysql_query("select * from tb_users");
-        $data;
+        $data="";
         while ($row = mysql_fetch_array($result))
             $data [] = $row;
 

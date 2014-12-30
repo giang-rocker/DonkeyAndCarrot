@@ -9,19 +9,8 @@ $indexEven = 1;
 $indexOdd = 0;
 ?> 
 
-<script>
-    var h = $(document).height();
-    var w = $(document).width();
-
-    var zoom = h / 900;
-
-
-    //   alert(h + " " + w + " " + zoom);
-
-    $("#body").css({"zoom": zoom});
-</script>
-
-<div id="wrap_timeline" class="wrap_timeline" style="width:  <?php echo (($num + 1) ) * 330 + (2 * 380) ?>px;">
+    
+<div id="wrap_timeline" class="wrap_timeline" style=" min-width: 100%; width:  <?php echo (($num + 1) ) * 330 + (2 * 380) ?>px;">
     <table id="timeline_table" class="timeline_table">
         <tr>
             <!-- FIST COL TIMELINE -->
@@ -33,11 +22,11 @@ $indexOdd = 0;
             <td id="timeline_content" class="timeline_content" >
                 <form action="" method="POST">
                     <div id="timeline_content_main_<?php echo $color[($i_color ) % 4] ?>" class="timeline_content_main_<?php echo $color[($i_color ) % 4]; ?>">
-                        <div id="timeline_content_title" class="timeline_content_title sizexl" >
+                        <div id="timeline_content_title" class="timeline_content_title sizexl bold" >
                             <input name="txtTIMELINE_TITLE" class="input_timeline_title bo-tron white" placeholder="Tiêu đề" />
                         </div>
                         <div id="timeline_content_text" class="timeline_content_text sizelarge" >
-                            <textarea name="txtTIMELINE_CONTENT" class="input_timeline_content bo-tron white" placeholder="Sự kiện .." ></textarea>
+                            <textarea name="txtTIMELINE_CONTENT" class="input_timeline_content bo-tron white " placeholder="Sự kiện .." ></textarea>
                             <div id="note_sign" class="timeline_submit">
                                 <button class="delete_button" type="reset"></button>
                                 <button name="action" value="Add" class="check_button"></button>
@@ -52,9 +41,9 @@ $indexOdd = 0;
                             <input name="txtTIMELINE_DATE" class="input_timeline_d " placeholder="00" maxlength="2" />/<input name="txtTIMELINE_MONTH" class="input_timeline_d" placeholder ="00" maxlength="2"/>/<input name="txtTIMELINE_YEAR" class="input_timeline_d" placeholder="2014" maxlength="4"/>
                         </div>
                     </div>
-                    <div id="timeline_content_location_<?php echo $color[($i_color ) % 4] ?>" class="timeline_content_location_<?php echo $color[($i_color ) % 4]; ?> rotate_180">
+                    <div id="timeline_content_location_<?php echo $color[($i_color ) % 4] ?>" class=" timeline_content_location_<?php echo $color[($i_color ) % 4]; ?> rotate_180">
                         <div class="rotate_180" >
-                            <input   name="txtTIMELINE_LOCATION" class="input_timeline_location bo-tron "  maxlength="10"/>
+                            <input   name="txtTIMELINE_LOCATION" class="input_timeline_location bo-tron bold"  maxlength="30"/>
                         </div>
                     </div>
                 </form>
@@ -66,8 +55,8 @@ $indexOdd = 0;
             for ($i = 0; $i < $num; $i+=2) { ?>
                 <td id="timeline_content" class="timeline_content" >
                     <div id="timeline_padding_top" class="timeline_padding_top"></div>
-                    <div id="timeline_content_location_<?php echo $color[$i_color % 4] ?>" class="timeline_content_location_<?php echo $color[$i_color % 4] ?>">
-                        <?php echo mb_strtoupper($listOfTimeline[$i]["TIMELINE_LOCATION"], "UTF-8"); ?>
+                    <div id="timeline_content_location_<?php echo $color[$i_color % 4] ?>" class="timeline_content_location_<?php echo $color[$i_color % 4] ?> bold">
+                        <div class="timeline_content_location"> <?php echo mb_strtoupper($listOfTimeline[$i]["TIMELINE_LOCATION"], "UTF-8"); ?> </div>
                     </div>
                     <div id="timeline_content_date_<?php echo $color[$i_color % 4] ?>" class=" timeline_content_date timeline_content_date_<?php echo $color[$i_color % 4] ?> ios_font sizexxl">
                         <?php
@@ -79,7 +68,7 @@ $indexOdd = 0;
 
                     </div>
                     <div id="timeline_content_main_<?php echo $color[$i_color % 4] ?>" class="timeline_content_main_<?php echo $color[$i_color % 4] ?>">
-                        <div id="timeline_content_title" class="timeline_content_title sizexl" >
+                        <div id="timeline_content_title" class="timeline_content_title sizexl bold" >
                             <?php
                             echo mb_strtoupper(($listOfTimeline[$i]["TIMELINE_TITLE"]), 'UTF-8');
                             ?>
@@ -97,7 +86,7 @@ $indexOdd = 0;
                     <td id="timeline_content" class="timeline_content" >
 
                         <div id="timeline_content_main_<?php echo $color[($i_color + 1) % 4] ?>" class="timeline_content_main_<?php echo $color[($i_color + 1) % 4]; ?>">
-                            <div id="timeline_content_title" class="timeline_content_title sizexl" >
+                            <div id="timeline_content_title" class="timeline_content_title sizexl bold" >
                                 <?php
                                 echo mb_strtoupper(($listOfTimeline[$i + 1]["TIMELINE_TITLE"]), 'UTF-8');
                                 ?>
@@ -118,9 +107,9 @@ $indexOdd = 0;
                             echo date_format($day, 'd/m/Y');
                             ?>
                         </div>
-                        <div id="timeline_content_location_<?php echo $color[($i_color + 1) % 4] ?>" class="timeline_content_location_<?php echo $color[($i_color + 1) % 4]; ?> rotate_180">
+                        <div id="timeline_content_location_<?php echo $color[($i_color + 1) % 4] ?>" class="bold timeline_content_location_<?php echo $color[($i_color + 1) % 4]; ?> rotate_180">
                             <div class="rotate_180" >
-                                <?php echo mb_strtoupper($listOfTimeline[$i + 1]["TIMELINE_LOCATION"], "UTF-8"); ?>
+                                <p class="timeline_content_location"   >   <?php echo mb_strtoupper($listOfTimeline[$i + 1]["TIMELINE_LOCATION"], "UTF-8"); ?> </p>
                             </div>
                         </div>
 

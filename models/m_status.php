@@ -57,7 +57,7 @@ $this->setQuery("insert into tb_action(ACTION_ID,ACTION_TITLE,ACTION_POINT,ACTIO
 		public function listOfTb_action () { 
   		mysql_query ("set character_set_results='utf8'");  
 		 $result = mysql_query("select * from tb_action"); 
-		 $data; 
+		 $data=""; 
 		 while ($row = mysql_fetch_array ($result)) 
 				$data [] = $row;	 
 		

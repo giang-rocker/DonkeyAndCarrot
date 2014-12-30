@@ -1,5 +1,9 @@
 <?php
 
+ if (isset($_GET['action']) && $_GET['action']=="read") {
+        $objNote->readNote();
+    }
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tb_notes = new Tb_notes();
     if (isset($_POST['txtUSER_ID'])) {
@@ -27,6 +31,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $i = 1;
     
     }
+    
+     if (isset($_POST['delete']) ) {
+        mysql_query("BEGIN TRAN");
+
+        $i = 0;
+        if ($tb_notes->delete($_POST["delete"]) > 0)
+            $i = 1;
+    
+    }
+    
+   
+    
      include_once('./views/v_notes.php');
     ?>
     

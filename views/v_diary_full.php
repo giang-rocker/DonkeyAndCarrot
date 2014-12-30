@@ -55,7 +55,7 @@ $num = count($listOfDiary);
                                 <div class="scroller">
                                       <p style="text-align: right"><?php echo (($i + 1) . "/" . $num) ?> </p>
                                   
-                                      <h2 style="text-transform: uppercase"><?php echo $listOfDiary[$i]["DIARY_TITLE"] ?></h2>
+                                      <h2 class="roboto_font" style="text-transform: uppercase"><?php echo $listOfDiary[$i]["DIARY_TITLE"] ?></h2>
                                     <p class="" style=" font-size: 25px" >  <?php
                                         // echo date
                                         $day = date_create($listOfDiary[$i]["DIARY_TIMESTAMP"]);

@@ -91,8 +91,8 @@ class Tb_timelines extends database {
     }
 
     public function add() {
-        $this->setQuery("insert into tb_timelines(TIMELINE_DATE,TIMELINE_LOCATION,TIMELINE_TITLE,USER_ID,TIMELINE_CONTENT) values  ('" . $this->getTIMELINE_DATE() . "',n'" . $this->getTIMELINE_LOCATION() . "',n'" . $this->getTIMELINE_TITLE() . "','" . $this->getUSER_ID() . "',n'" . $this->getTIMELINE_CONTENT() . "')");
-        echo $this->getQuery();
+        $this->setQuery("insert into tb_timelines(TIMELINE_DATE,TIMELINE_LOCATION,TIMELINE_TITLE,TIMELINE_CONTENT) values  ('" . $this->getTIMELINE_DATE() . "',n'" . $this->getTIMELINE_LOCATION() . "',n'" . $this->getTIMELINE_TITLE() . "',n'" . $this->getTIMELINE_CONTENT() . "')");
+       echo $this->getQuery();
         return $this->executeQuery();
     }
 
@@ -109,7 +109,7 @@ class Tb_timelines extends database {
     public function listOfTb_timelines() {
         mysql_query("set character_set_results='utf8'");
         $result = mysql_query("select * from tb_timelines order by TIMELINE_DATE desc");
-        $data;
+        $data="";
         while ($row = mysql_fetch_array($result))
             $data [] = $row;
 

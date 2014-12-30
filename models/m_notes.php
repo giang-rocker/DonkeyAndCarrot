@@ -56,14 +56,14 @@ class Tb_notes extends database {
         return $this->executeQuery();
     }
 
-    public function delete() {
-        $this->setQuery("delete from tb_notes where NOTE_ID ='" . $this->getNOTE_ID() . "'");
+    public function delete($id) {
+        $this->setQuery("update tb_notes set NOTE_DELETE=1 where NOTE_ID ='" . $id . "'");
         return $this->executeQuery();
     }
 
     public function listOfTb_notes() {
         mysql_query("set character_set_results='utf8'");
-        $result = mysql_query("select * from tb_notes order by NOTE_DATE DESC");
+        $result = mysql_query("select * from tb_notes where NOTE_DELETE = 0 order by NOTE_DATE DESC ");
         $data="";
         while ($row = mysql_fetch_array($result)){
             $data [] = $row;
@@ -81,5 +81,26 @@ class Tb_notes extends database {
         return $data;
     }
 
+
+
+public function countUnreadNote () {
+       mysql_query("set character_set_results='utf8'");
+        $result = mysql_query("select count(NOTE_ID) from tb_notes where USER_ID =1 AND NOTE_SEEN = 0");
+        $data="";
+        $row = mysql_fetch_array($result);
+            $data = $row;
+
+        return $data[0][0];
+    
+    
+}
+
+public function readNote() {
+     $this->setQuery("update tb_notes set NOTE_SEEN = 1 ");
+     echo $this->getQuery();
+        return $this->executeQuery();
+    
+    
+}
 }
 ?> 

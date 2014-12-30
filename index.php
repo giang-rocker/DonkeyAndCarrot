@@ -1,12 +1,13 @@
 <?php
 session_start();
 ?>
-<html lang="en" class="no-js" >
+<html lang="en"  >
     <head>
-       
+<!--        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <meta charset="UTF-8" />
         <title>DONKEY & CARROT</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap.min.css" rel="stylesheet" >
         <link href="css/main.css" rel="stylesheet" >
         <link href="css/panel_tab.css" rel="stylesheet" >
 
@@ -15,7 +16,7 @@ session_start();
         <script src="js/jqBootstrapValidation.js"></script>
         <script src="js/jquery.min.js"></script>
         <script  src="js/nicEdit.js"></script>
-         
+
         <!-- jQuery -->
         <script src="views/jquery.min.js"></script>
 
@@ -25,13 +26,16 @@ session_start();
 
     </head>
 
-
-    <body id = "body" class="boby"    >
+    <script>
+    
+    </script>
+    
+    <body id = "body" class="boby "  >
 
         <?php
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         // menu
-        $listTable = array("config", "login", "timelines", "notes", "diary", "notes", "users", "actions", "action_history");
+        $listTable = array("config", "login", "timelines", "notes", "diary", "notes", "users", "actions","todolist", "action_history");
         $listName = array("Timelines", "Notes", "Notes");
 
 
@@ -60,12 +64,13 @@ session_start();
         $objActionHistory = new Action_history();
         $objAction = new Tb_action();
         $objDiary = new Tb_diary();
+        $objTodolist = new Tb_todolist();
         // inclde controller
         if (isset($_SESSION["username"]) && $_SESSION["username"] != "" && $_SESSION["username"] != NULL) {
             include_once ("./controllers/c_" . $option . ".php");
         } else
             include_once ("./controllers/c_mainpage.php");
         ?>
-        
-        <div style="bottom:0px; left: 0px;position: fixed;"><a href="index.php"><img src="lib/homepng.png" width="50%" /></a></div>
+
+        <div style="bottom:0px; left: 0px;position: fixed; z-index: 100"><a href="index.php"><img src="lib/homepng.png" width="100" /></a></div>
     </body>

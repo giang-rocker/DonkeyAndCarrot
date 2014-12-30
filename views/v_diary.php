@@ -9,10 +9,8 @@ $num = count($listOfDiary);
 
 
 <head>
-    <meta charset=utf-8>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <title>FlipPage</title>
+   
+    <title>Diary</title>
 
 
 
@@ -45,22 +43,8 @@ $num = count($listOfDiary);
 </head>
 
 
-<script type="text/javascript">
-    bkLib.onDomLoaded(function () {
-        nicEditors.allTextAreas()
-        new nicEditor({maxHeight : 500}).panelInstance('area5');
-    });
-</script>
-<script>
-    var h = $(document).height();
-    var w = $(document).width();
-
-    var padding = (h - 600) / 2;
-
-
-    $("#diary_body").css({"margin": 200px});
-</script>
-
+ 
+ 
 
 <body class="diary_body" style="background: url('./lib/login_bg.jpg'); margin-top: 5%">
 
