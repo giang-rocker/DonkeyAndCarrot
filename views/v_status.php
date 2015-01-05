@@ -41,15 +41,18 @@ $prop = min(1, ($maxPoint+$CarrotPoint)/500);
 
 
         </div>
-
+        <<form action="" method="post">
         <div class="status_action"> 
-            <a href="index.php?option=status&action=blanktv"><img src="./lib/dctv.png"   class="icon_action"          /></a>
+            <button class="icon_action dctv" ></button>
+            <!--<button class=" icon_action hit" ></button>-->
+<!--            <a href="index.php?option=status&action=blanktv"><img src="./lib/dctv.png"   class="icon_action"          /></a>
             <a href="index.php?option=status&action=hit&id=1"><img src="./lib/hit.png"   class="icon_action"          /></a>
             <a href="index.php?option=status&action=kick&id=2">   <img src="./lib/kick.png"      class="icon_action"         /></a>
             <a href="index.php?option=status&action=kiss&id=4">  <img src="./lib/kiss.png"       class="icon_action"        /></a>
-            <a href="index.php?option=status&action=notavailable">  <img src="./lib/blank.png"     class="icon_action"          /></a>
+            <a href="index.php?option=status&action=notavailable">  <img src="./lib/blank.png"     class="icon_action"          /></a>-->
         </div>
         <div class="status_reason " > <input name="reason" placeholder="Some reason ..." class="bo-tron" style="width: 100%"/> </div>
+        </form>
         <div class="status_tv"><img src="./lib/<?php 
         if (isset($_GET['action'])) {
             echo $_GET['action'];

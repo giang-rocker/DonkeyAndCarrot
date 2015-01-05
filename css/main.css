@@ -931,9 +931,37 @@ p.forgotpass a {
     padding-top:29px;
 }
 
+
+
+.icon_action {
+  //  margin-right: 20px;
+  //  margin-top:30px;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 0px;
+   
+}
+
+.icon_action:hover {
+    
+    width: 120px;
+    heigh: 120px;
+}
+
+.dctv {
+     background: url("../lib/dctv.png") no-repeat;
+}
+
+.hit {
+      background: url("../lib/hit.png") no-repeat;
+}
+
 .icon_action {
     margin-right: 20px;
     margin-top:30px;
+    background: transparent;
+    border: 0px;
 
 }
 
